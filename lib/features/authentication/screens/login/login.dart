@@ -3,9 +3,8 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tedix/common/styles/spacing_styles.dart';
 import 'package:tedix/features/authentication/screens/signup/signup.dart';
 import 'package:tedix/navigation_menu.dart';
-import 'package:tedix/utils/constants/sizes.dart';
-import 'package:tedix/utils/constants/text_strings.dart';
-import 'package:get/get.dart';
+import '../../../../utils/constants/sizes.dart';
+import '../../../../utils/constants/text_strings.dart';
 
 
 class LoginScreen extends StatelessWidget {
@@ -19,7 +18,6 @@ class LoginScreen extends StatelessWidget {
           padding: TSpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
-
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -31,7 +29,6 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
 
-
               Form(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
@@ -42,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                       TextFormField(
                         decoration: const InputDecoration(
                             prefixIcon: Icon(Iconsax.direct_right),
-                            labelText: TTexts.email), // InputDecoration
+                            labelText: TTexts.email),
                       ),
                       const SizedBox(height: TSizes.spaceBtwInputFields),
 

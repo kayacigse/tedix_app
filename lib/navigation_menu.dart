@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tedix/features/personalization/screens/settings/settings.dart';
 import 'package:tedix/features/shop/screens/home/home.dart';
+import 'package:tedix/features/shop/screens/home/store/add_store.dart';
 
 
 class NavigationMenu extends StatefulWidget {
@@ -12,9 +14,11 @@ class NavigationMenu extends StatefulWidget {
 class _NavigationMenuState extends State<NavigationMenu> {
   int index = 0;
   final screens = [
-    HomeScreen(),
-    Center(child: Container(color: Colors.purple),),
-    Center(child: Container(color: Colors.orange),),
+    const HomeScreen(),
+    const AddStoreScreen(),
+    const SettingsScreen(),
+
+
   ];
 
   @override
@@ -35,3 +39,4 @@ class _NavigationMenuState extends State<NavigationMenu> {
     );
   }
 }
+
