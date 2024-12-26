@@ -1,3 +1,9 @@
+.env
+# Firebase Dosyaları
+.firebaserc
+firebase.json
+firebase.indexes.json
+
 # Miscellaneous
 *.class
 *.log
@@ -41,3 +47,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Android specific
+*.apk
+*.ap_
+*.dex
+*.so
+*.hprof
