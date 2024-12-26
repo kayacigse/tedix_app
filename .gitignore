@@ -3,6 +3,9 @@
 .firebaserc
 firebase.json
 firebase.indexes.json
+macos/Runner/GoogleService-Info.plist
+lib/firebase_options.dart
+
 
 # Miscellaneous
 *.class
