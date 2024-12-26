@@ -56,8 +56,4 @@ app.*.map.json
 *.ap_
 *.dex
 *.so
-<<<<<<< HEAD
 *.hprof
-=======
-*.hprof
->>>>>>> 11919579746e89129bc2294df61194972b461e94
