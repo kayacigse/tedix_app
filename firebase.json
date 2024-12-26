@@ -1,0 +1,45 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "tedix-637ca",
+          "appId": "1:260640434979:android:d937e1ce2b2fc39e617a96",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "tedix-637ca",
+          "appId": "1:260640434979:ios:0d19aae7f642b0ad617a96",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "tedix-637ca",
+          "appId": "1:260640434979:ios:0d19aae7f642b0ad617a96",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "tedix-637ca",
+          "configurations": {
+            "android": "1:260640434979:android:d937e1ce2b2fc39e617a96",
+            "ios": "1:260640434979:ios:0d19aae7f642b0ad617a96",
+            "macos": "1:260640434979:ios:0d19aae7f642b0ad617a96",
+            "web": "1:260640434979:web:fdd940dba3ab5be8617a96",
+            "windows": "1:260640434979:web:a0c070d122818f4b617a96"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}

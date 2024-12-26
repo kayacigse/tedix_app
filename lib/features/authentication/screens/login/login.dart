@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tedix/common/styles/spacing_styles.dart';
 import 'package:tedix/features/authentication/screens/signup/signup.dart';
+import 'package:tedix/navigation_menu.dart';
 import 'package:tedix/utils/constants/sizes.dart';
 import 'package:tedix/utils/constants/text_strings.dart';
 import 'package:get/get.dart';
@@ -69,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> const NavigationMenu()));},
                               child: const Text(TTexts.signIn))),
                       const SizedBox(height: TSizes.spaceBtwSections),
 

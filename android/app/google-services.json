@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "260640434979",
+    "project_id": "tedix-637ca",
+    "storage_bucket": "tedix-637ca.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260640434979:android:d937e1ce2b2fc39e617a96",
+        "android_client_info": {
+          "package_name": "com.example.tedixdeneme"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWQtv0IM3vWfl2RXT8qOD8zBR83X3FvrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
