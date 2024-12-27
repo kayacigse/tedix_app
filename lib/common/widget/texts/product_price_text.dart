@@ -20,7 +20,7 @@ class TProductPriceText extends StatelessWidget {
       currencySign + price,
       maxLines: maxLines,
       overflow: TextOverflow.ellipsis,
-      style: Theme.of(context).textTheme.headlineMedium,
+      style: Theme.of(context).textTheme.headlineSmall,
     );
   }
 }

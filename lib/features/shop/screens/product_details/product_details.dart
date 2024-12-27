@@ -19,19 +19,16 @@ class ProductDetailScreen extends StatelessWidget {
         child: Column(
           children: [
             TProductImage(),
-
             Padding(
               padding: EdgeInsets.only(right: TSizes.defaultSpace,left: TSizes.defaultSpace,bottom: TSizes.defaultSpace),
               child: Column(
                 children: [
                   TProductDataDetail(),
                   const SizedBox(height: TSizes.spaceBtwItems),
-
                   Padding(
                     padding: const EdgeInsets.only(top: TSizes.spaceBtwSections),
-                    child: SizedBox(width: double.infinity, child: ElevatedButton(onPressed: (){}, child: Text('Request')),),
+                    child: SizedBox(width: double.infinity, child: ElevatedButton(onPressed: (){}, child: Text('ADD CART')),),
                   ),
-
                   SizedBox(height: TSizes.spaceBtwSections),
                   TSectionHeading(title: 'Description', showActionButton: false),
                   ReadMoreText(
@@ -42,11 +39,7 @@ class ProductDetailScreen extends StatelessWidget {
                     trimExpandedText: 'Show Less',
                     moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-
-
                   ),
-
-
                 ],
               ),
             )

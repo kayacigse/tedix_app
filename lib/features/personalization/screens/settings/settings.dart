@@ -7,6 +7,7 @@ import 'package:tedix/common/widget/texts/settings_menu_text.dart';
 import '../../../../common/widget/texts/user_profile_text.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
+import '../../../shop/screens/order/order.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -36,7 +37,7 @@ class SettingsScreen extends StatelessWidget {
                 SizedBox(height: TSizes.spaceBtwSections),
 
                 TSettingsMenuTile(icon: Iconsax.safe_home, title: 'Products', subtitle: 'See the products you have loaded', onTap: (){} ),
-                TSettingsMenuTile(icon: Iconsax.bag_tick, title: 'Requests', subtitle: 'See the requests you have gotten', onTap: (){} ),
+                TSettingsMenuTile(icon: Iconsax.bag_tick, title: 'Requests', subtitle: 'See the requests you have gotten', onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => const TOrderScreen()));} ),
 
                 const SizedBox(height: TSizes.spaceBtwSections),
                 SizedBox(
