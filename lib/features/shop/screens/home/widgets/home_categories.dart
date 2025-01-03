@@ -9,11 +9,11 @@ class THomeCategories extends StatelessWidget {
     super.key,
   });
 
-  // Kategorileri Firestore'dan almak için bir fonksiyon
+
   Future<List<QueryDocumentSnapshot>> _getCategories() async {
     try {
       QuerySnapshot querySnapshot = await FirebaseFirestore.instance
-          .collection('categories') // Kategoriler koleksiyonu
+          .collection('categories')
           .get();
       return querySnapshot.docs;
     } catch (e) {
@@ -27,7 +27,7 @@ class THomeCategories extends StatelessWidget {
     return SizedBox(
       height: 80,
       child: FutureBuilder<List<QueryDocumentSnapshot>>(
-        future: _getCategories(), // Kategorileri alıyoruz
+        future: _getCategories(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -49,10 +49,10 @@ class THomeCategories extends StatelessWidget {
             itemBuilder: (_, index) {
               var category = categories[index];
               return TVerticalImageText(
-                image: category['imageUrl'], // Firestore'dan gelen kategori resmi
-                title: category['name'], // Kategori adı
+                image: category['imageUrl'],
+                title: category['name'],
                 onTap: () {
-                  // Kategorinin id'sine göre ürünler ekranına yönlendiriyoruz
+
                   Navigator.push(
                     context,
                     MaterialPageRoute(

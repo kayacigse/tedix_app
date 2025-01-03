@@ -7,17 +7,17 @@ import 'package:tedix/layouts/grid_layout.dart';
 import '../../../../common/widget/containers/primary_header_container.dart';
 import '../../../../common/widget/containers/search_container.dart';
 import '../../../../common/widget/texts/section_heading.dart';
-import '../../../../utils/constants/sizes.dart';
+
 import '../all_products/all_products.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  // Firestore'dan ürünleri almak için bir fonksiyon
+
   Future<List<QueryDocumentSnapshot>> _getProducts() async {
     try {
       QuerySnapshot querySnapshot = await FirebaseFirestore.instance
-          .collection('products') // Firestore koleksiyonu ismi
+          .collection('products')
           .get();
       return querySnapshot.docs;
     } catch (e) {
@@ -69,9 +69,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
 
-                  // Firestore'dan ürünleri alıp GridLayout'ta gösteriyoruz
+
                   FutureBuilder<List<QueryDocumentSnapshot>>(
-                    future: _getProducts(), // Verileri alıyoruz
+                    future: _getProducts(),
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
                         return const Center(child: CircularProgressIndicator());
@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                         return const Center(child: Text('No products available.'));
                       }
 
-                      // Veriler geldiyse, GridLayout'ı gösteriyoruz
+
                       List<QueryDocumentSnapshot> products = snapshot.data!;
 
                       return TGridLayout(
@@ -93,15 +93,16 @@ class HomeScreen extends StatelessWidget {
                         itemBuilder: (context, index) {
                           var product = products[index];
 
-                          // Firebase'den gelen ürün verilerini kontrol et
+
                           String title = product['title'] ?? 'No Title';
                           double price = product['price'] != null ? product['price'].toDouble() : 0.0;
                           String imageUrl = product['imageUrl'] ?? '';
 
+
                           return TProductCardVertical(
-                            title: title, // Ürün başlığı
-                            price: price, // Ürün fiyatı
-                            imageUrl: imageUrl, // Ürün resim URL'si
+                            title: title,
+                            price: price,
+                            imageUrl: imageUrl,
                           );
                         },
                       );
