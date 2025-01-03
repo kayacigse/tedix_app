@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/sizes.dart';
+
 
 class TRoundedImage extends StatelessWidget {
   const TRoundedImage({
@@ -13,9 +12,9 @@ class TRoundedImage extends StatelessWidget {
     this.applyImageRadius = true,
     required this.imageUrl,
     this.fit = BoxFit.contain,
-    this.backgroundColor = TColors.light,
+    this.backgroundColor = Colors.white,
     this.isNetworkImage = false,
-    this.borderRadius = TSizes.md,
+    this.borderRadius = 16,
   });
 
   final double? width, height;

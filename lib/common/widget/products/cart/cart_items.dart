@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../utils/constants/sizes.dart';
+
 import '../../texts/product_price_text.dart';
 import 'cart_item.dart';
 
@@ -11,7 +11,7 @@ class TCartItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      separatorBuilder: (_, __) => const SizedBox(height: TSizes.spaceBtwSections),
+      separatorBuilder: (_, __) => const SizedBox(height: 32),
       shrinkWrap: true,
       itemCount: 4,
       itemBuilder: (_, index) => Column(

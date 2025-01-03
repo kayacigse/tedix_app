@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../../../common/widget/appbar/appbar.dart';
 import '../../../../common/widget/products/cart/cart_items.dart';
 import '../../../../navigation_menu.dart';
-import '../../../../utils/constants/sizes.dart';
 import '../succes_screen/succes_screen.dart';
 
 class CartScreen extends StatelessWidget {
@@ -13,12 +12,12 @@ class CartScreen extends StatelessWidget {
     return Scaffold(
       appBar: TAppBar(title: Text('Cart', style: Theme.of(context).textTheme.headlineMedium)),
       body: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(24),
         child: TCartItems(),
 
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(24),
         child: ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => SuccessScreen(title: 'Your Request Has Been Received', onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => NavigationMenu(),),);},),),);}, child: Text('Request'),),
       ),
     );

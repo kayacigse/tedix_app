@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/sizes.dart';
+
 
 
 class TRoundedContainer extends StatelessWidget {
@@ -12,9 +11,10 @@ class TRoundedContainer extends StatelessWidget {
     this.margin,
     this.padding,
     this.showBorder = false,
-    this.radius = TSizes.cardRadiusLg,
-    this.backgroundColor = TColors.white,
-    this.borderColor = TColors.borderPrimary,
+    this.radius = 16,
+    this.backgroundColor = Colors.white,
+    this.borderColor = Colors.white70,
+
   });
 
   final double? width;

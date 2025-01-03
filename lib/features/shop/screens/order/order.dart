@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tedix/features/shop/screens/order/widgets/orders_list.dart';
 import '../../../../common/widget/appbar/appbar.dart';
-import '../../../../utils/constants/sizes.dart';
+
 
 
 class TOrderScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class TOrderScreen extends StatelessWidget {
         showBackArrow: true,
       ),
       body: const Padding(
-        padding: EdgeInsets.all(TSizes.defaultSpace),
+        padding: EdgeInsets.all(24),
         child: TOrderListItems(),
       ),
     );

@@ -23,7 +23,7 @@ class TProductImage extends StatelessWidget {
             SizedBox(
               height: 400,
               child: Padding(
-                padding: EdgeInsets.all(TSizes.productImageRadius),
+                padding: EdgeInsets.all(16),
                 child: Center(
                   child: Image(
                     image: AssetImage(TImages.productImage1),

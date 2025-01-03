@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tedix/utils/constants/colors.dart';
+
 
 
 class TSettingsMenuTile extends StatelessWidget {
@@ -21,9 +21,9 @@ class TSettingsMenuTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(icon, size: 28, color: TColors.primary),
+      leading: Icon(icon, size: 28, color: Color.fromRGBO(75, 104, 255, 100)),
       title: Text(title, style: Theme.of(context).textTheme.titleMedium),
-      subtitle: Text(subtitle, style: Theme.of(context).textTheme.labelLarge?.copyWith(color: TColors.darkerGrey)),
+      subtitle: Text(subtitle, style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.grey.shade800)),
       trailing: trailing,
       onTap: onTap,
 

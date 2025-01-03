@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tedix/common/widget/containers/rounded_container.dart';
-import '../../../../../utils/constants/colors.dart';
-import '../../../../../utils/constants/sizes.dart';
+
 
 class TOrderListItems extends StatelessWidget {
   const TOrderListItems({super.key});
@@ -12,11 +11,11 @@ class TOrderListItems extends StatelessWidget {
     return ListView.separated(
       shrinkWrap: true,
       itemCount: 10,
-      separatorBuilder: (_,__)=> const SizedBox(height: TSizes.spaceBtwItems),
+      separatorBuilder: (_,__)=> const SizedBox(height:16),
       itemBuilder: (_, item) => TRoundedContainer(
         showBorder: true,
-        backgroundColor: TColors.light,
-        padding: const EdgeInsets.all(TSizes.md),
+        backgroundColor: Colors.white,
+        padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -24,13 +23,13 @@ class TOrderListItems extends StatelessWidget {
               children: [
                 // 1 Icon
                 Icon(Iconsax.ship),
-                SizedBox(width: TSizes.spaceBtwItems / 2),
+                SizedBox(width: 8),
                 Expanded(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Processing', style: Theme.of(context).textTheme.bodyLarge!.apply(color: TColors.primary, fontWeightDelta: 1),),
+                      Text('Processing', style: Theme.of(context).textTheme.bodyLarge!.apply(color: Color.fromRGBO(75, 104, 255, 100), fontWeightDelta: 1),),
                       Text('07 Nov 2024', style: Theme.of(context).textTheme.headlineSmall),
                     ],
                   ),
@@ -39,7 +38,7 @@ class TOrderListItems extends StatelessWidget {
                   onPressed: () {},
                   icon: const Icon(
                     Iconsax.arrow_right_34,
-                    size: TSizes.iconSm,
+                    size: 16,
                   ),
                 ),
       

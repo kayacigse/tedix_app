@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../../common/styles/spacing_styles.dart';
-import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/constants/text_strings.dart';
 
 
@@ -24,14 +23,14 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
 
-              const SizedBox(height: TSizes.spaceBtwSections),
+              const SizedBox(height: 32),
 
               Text(
                 title,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: TSizes.spaceBtwItems),
+              const SizedBox(height:16),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(onPressed: onPressed, child: const Text(TTexts.tContinue)),

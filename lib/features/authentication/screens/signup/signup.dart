@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tedix/features/authentication/screens/signup/signup_form.dart';
-import 'package:tedix/utils/constants/sizes.dart';
 import 'package:tedix/utils/constants/text_strings.dart';
-import 'package:iconsax/iconsax.dart';
+
 
 
 class SignupScreen extends StatelessWidget {
@@ -14,12 +13,12 @@ class SignupScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(TTexts.signupTitle, style: Theme.of(context).textTheme.headlineMedium),
-              const SizedBox(height: TSizes.spaceBtwSections),
+              const SizedBox(height: 32),
 
               const TSignupForm(),
             ],

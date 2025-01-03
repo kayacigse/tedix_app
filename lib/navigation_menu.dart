@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tedix/features/personalization/screens/settings/settings.dart';
 import 'package:tedix/features/shop/screens/home/home.dart';
-import 'package:tedix/features/shop/screens/home/store/add_store.dart';
 import 'features/shop/screens/cart/cart.dart';
 
 
@@ -16,7 +15,6 @@ class _NavigationMenuState extends State<NavigationMenu> {
   int index = 0;
   final screens = [
     const HomeScreen(),
-    const AddStoreScreen(),
     const CartScreen(),
     const SettingsScreen(),
 
@@ -33,7 +31,6 @@ class _NavigationMenuState extends State<NavigationMenu> {
         destinations: const [
           NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
           NavigationDestination(icon: Icon(Iconsax.shop), label: 'Add Product'),
-          NavigationDestination(icon: Icon(Iconsax.bag_tick), label: 'Cart'),
           NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
         ],
       ),

@@ -22,7 +22,7 @@ class TCartItem extends StatelessWidget {
           padding: const EdgeInsets.all(TSizes.sm),
           backgroundColor: TColors.light,
         ),
-        const SizedBox(height: TSizes.spaceBtwItems),
+        const SizedBox(height: 16),
         const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

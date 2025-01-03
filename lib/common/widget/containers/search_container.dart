@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/device/device_utility.dart';
 
@@ -27,19 +26,19 @@ class TSearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Container(
           width: TDeviceUtils.getScreenWidth(context),
-          padding: EdgeInsets.all(TSizes.md),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: showBackground ? TColors.light : Colors.transparent,
+            color: showBackground ? Color.fromRGBO(249, 249, 249, 100) : Colors.transparent,
             borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
-            border: showBorder ? Border.all(color:TColors.grey) : null,
+            border: showBorder ? Border.all(color:Colors.grey) : null,
           ),
           child: Row(
             children: [
-              Icon(icon,color: TColors.darkerGrey),
-              const SizedBox(width: TSizes.spaceBtwItems),
+              Icon(icon,color: Color.fromRGBO(79, 79, 79, 100)),
+              const SizedBox(width: 16),
               Text(text, style: Theme.of(context).textTheme.bodySmall),
 
             ],

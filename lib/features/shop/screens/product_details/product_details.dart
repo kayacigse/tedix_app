@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
-import 'package:tedix/common/widget/appbar/appbar.dart';
-import 'package:tedix/common/widget/curved_edges/curved_edges_widget.dart';
 import 'package:tedix/common/widget/texts/section_heading.dart';
 import 'package:tedix/features/shop/screens/product_details/widgets/product_data_detail.dart';
 import 'package:tedix/features/shop/screens/product_details/widgets/product_detail_image.dart';
-import 'package:tedix/utils/constants/colors.dart';
-import 'package:tedix/utils/constants/image_string.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class ProductDetailScreen extends StatelessWidget {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../../../common/widget/appbar/appbar.dart';
-import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
 
 
@@ -15,8 +14,8 @@ class THomeAppBar extends StatelessWidget {
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(TTexts.homeAppbarTitle, style: Theme.of(context).textTheme.labelMedium!.apply(color: TColors.grey)),//dark or light mode doesnt matter its always gonna be grey
-          Text(TTexts.homeAppbarSubTitle, style: Theme.of(context).textTheme.labelMedium!.apply(color: TColors.white,),),
+          Text(TTexts.homeAppbarTitle, style: Theme.of(context).textTheme.labelMedium!.apply(color: Colors.grey)),//dark or light mode doesnt matter its always gonna be grey
+          Text(TTexts.homeAppbarSubTitle, style: Theme.of(context).textTheme.labelMedium!.apply(color: Colors.white,),),
         ],
       ),
     );
