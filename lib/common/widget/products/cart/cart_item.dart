@@ -19,15 +19,15 @@ class TCartItem extends StatelessWidget {
           imageUrl: TImages.productImage1,
           width: 60,
           height: 60,
-          padding: const EdgeInsets.all(TSizes.sm),
+          padding: const EdgeInsets.all(8),
           backgroundColor: TColors.light,
         ),
         const SizedBox(height: 16),
         const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TProductTitleText(title: 'Iphone 16 Pro Max',maxLines: 1),
-            TBrandTitleText(title: 'Apple'),
+            TProductTitleText(title: 'brick',maxLines: 1),
+
           ],
         ),
       ],

@@ -15,7 +15,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
   int index = 0;
   final screens = [
     const HomeScreen(),
-    const CartScreen(),
+    const AddProductScreen(),
     const SettingsScreen(),
 
 

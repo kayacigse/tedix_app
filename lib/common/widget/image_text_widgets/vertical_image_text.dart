@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../utils/constants/sizes.dart';
-
 
 class TVerticalImageText extends StatelessWidget {
   const TVerticalImageText({
@@ -28,26 +26,25 @@ class TVerticalImageText extends StatelessWidget {
             Container(
               width: 56,
               height: 56,
-              padding: const EdgeInsets.all(TSizes.sm),
+              padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 color: background,
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
-                child: Image(
-                    image: AssetImage(image),
-                    fit: BoxFit.cover),
+
+                child: Image.network(
+                  image,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-
-
-            const SizedBox(
-                height: 8 ),
+            const SizedBox(height: 8),
             SizedBox(
               width: 40,
               child: Text(
                 title,
-                style: Theme.of(context).textTheme.labelMedium!.apply(color:textColor),
+                style: Theme.of(context).textTheme.labelMedium!.apply(color: textColor),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),

@@ -4,21 +4,21 @@ import 'package:tedix/common/widget/products/products_cards/product_card_vertica
 
 
 class SubCategoriesScreen extends StatelessWidget {
-  final String categoryId; // Kategorinin ID'si
-  final String categoryName; // Kategorinin adı
+  final String categoryId;
+  final String categoryName;
 
   const SubCategoriesScreen({
     super.key,
-    required this.categoryId, // Kategori ID'si
-    required this.categoryName, // Kategori adı
+    required this.categoryId,
+    required this.categoryName,
   });
 
-  // Kategoriye ait ürünleri Firestore'dan almak için bir fonksiyon
+
   Future<List<QueryDocumentSnapshot>> _getProductsByCategory() async {
     try {
       QuerySnapshot querySnapshot = await FirebaseFirestore.instance
-          .collection('products') // Ürünler koleksiyonu
-          .where('categoryId', isEqualTo: categoryId) // Kategoriye ait ürünleri getiriyoruz
+          .collection('products')
+          .where('categoryId', isEqualTo: categoryId)
           .get();
       return querySnapshot.docs;
     } catch (e) {
@@ -31,7 +31,7 @@ class SubCategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(categoryName), // Kategori ismi burada gösteriliyor
+        title: Text(categoryName),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -39,7 +39,7 @@ class SubCategoriesScreen extends StatelessWidget {
           child: Column(
             children: [
               FutureBuilder<List<QueryDocumentSnapshot>>(
-                future: _getProductsByCategory(), // Kategoriye ait ürünleri alıyoruz
+                future: _getProductsByCategory(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());
@@ -57,19 +57,19 @@ class SubCategoriesScreen extends StatelessWidget {
                   return GridView.builder(
                     shrinkWrap: true,
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2, // Grid düzeni (2 sütun)
+                      crossAxisCount: 2,
                       crossAxisSpacing: 10,
                       mainAxisSpacing: 10,
                     ),
                     itemCount: products.length,
                     itemBuilder: (context, index) {
                       var product = products[index];
-                      // Fiyatı String'den double'a çeviriyoruz
                       double price = double.tryParse(product['price'].toString()) ?? 0.0;
                       return TProductCardVertical(
-                        title: product['title'], // Ürün başlığı
-                        price: price, // Ürün fiyatı
-                        imageUrl: product['imageUrl'], // Ürün resmi
+                        title: product['title'],
+                        price: price,
+                        imageUrl: product['imageUrl'],
+
                       );
                     },
                   );

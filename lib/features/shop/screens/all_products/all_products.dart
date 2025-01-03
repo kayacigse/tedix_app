@@ -8,12 +8,12 @@ import 'package:tedix/layouts/grid_layout.dart';
 class AllProducts extends StatelessWidget {
   const AllProducts({super.key});
 
-  // Firestore'dan tüm ürünleri almak için bir fonksiyon
+
   Future<List<QueryDocumentSnapshot>> _getAllProducts() async {
     try {
       QuerySnapshot querySnapshot = await FirebaseFirestore.instance
-          .collection('products') // Firestore koleksiyonu ismi
-          .get(); // Tüm ürünleri alıyoruz
+          .collection('products')
+          .get();
       return querySnapshot.docs;
     } catch (e) {
       print('Error fetching products: $e');
@@ -33,9 +33,9 @@ class AllProducts extends StatelessWidget {
           padding: EdgeInsets.all(24),
           child: Column(
             children: [
-              // Firestore'dan tüm ürünleri alıp GridLayout'ta gösteriyoruz
+
               FutureBuilder<List<QueryDocumentSnapshot>>(
-                future: _getAllProducts(), // Verileri alıyoruz
+                future: _getAllProducts(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());
@@ -49,19 +49,19 @@ class AllProducts extends StatelessWidget {
                     return const Center(child: Text('No products available.'));
                   }
 
-                  // Veriler geldiyse, GridLayout'ı gösteriyoruz
+
                   List<QueryDocumentSnapshot> products = snapshot.data!;
                   return TGridLayout(
                     itemCount: products.length,
                     itemBuilder: (context, index) {
                       var product = products[index];
                       return TProductCardVertical(
-                        title: product['title'], // Firestore'dan gelen veri
-                        // price'ı String'den double'a dönüştürüyoruz
+                        title: product['title'],
+
                         price: (product['price'] is String)
                             ? double.tryParse(product['price']) ?? 0.0
-                            : product['price'].toDouble(), // Firestore'dan gelen veri
-                        imageUrl: product['imageUrl'], // Firestore'dan gelen veri
+                            : product['price'].toDouble(),
+                        imageUrl: product['imageUrl'],
                       );
                     },
                   );

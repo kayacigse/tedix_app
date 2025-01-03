@@ -6,7 +6,6 @@ import 'package:tedix/features/shop/screens/product_details/product_details.dart
 import '../../../../utils/constants/enums.dart';
 import '../../../styles/shadows.dart';
 import '../../containers/rounded_container.dart';
-import '../../images/t_rounded_image.dart';
 import '../../texts/product_price_text.dart';
 
 class TProductCardVertical extends StatelessWidget {
@@ -14,7 +13,6 @@ class TProductCardVertical extends StatelessWidget {
   final double price;
   final String imageUrl;
 
-  // Constructor with named parameters
   const TProductCardVertical({
     super.key,
     required this.title,
@@ -27,7 +25,7 @@ class TProductCardVertical extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const ProductDetailScreen()));
+            context, MaterialPageRoute(builder: (context) => ProductDetailScreen(productId: '')));
       },
       child: Container(
         width: 180,
@@ -43,10 +41,14 @@ class TProductCardVertical extends StatelessWidget {
               height: 180,
               padding: const EdgeInsets.all(8),
               backgroundColor: Colors.white,
-              child: Stack(
-                children: [
-                  TRoundedImage(imageUrl: imageUrl, applyImageRadius: true), // Image URL dynamic
-                ],
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.network(
+                  imageUrl,
+                  fit: BoxFit.cover,
+                  height:400,
+                  width: 400,
+                ),
               ),
             ),
             const SizedBox(height: 8),
@@ -59,7 +61,7 @@ class TProductCardVertical extends StatelessWidget {
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      TBrandTitleText(title: 'Apple', brandTextSize: TextSizes.medium),
+                      TBrandTitleText(title: '', brandTextSize: TextSizes.medium),
                     ],
                   ),
                 ],
