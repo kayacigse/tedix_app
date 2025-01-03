@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 
 
@@ -8,8 +7,8 @@ class TVerticalImageText extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
-    this.textColor = TColors.white,
-    this.background = TColors.white,
+    this.textColor = Colors.white,
+    this.background = Colors.white,
     this.onTap,
   });
 
@@ -23,7 +22,7 @@ class TVerticalImageText extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(right: TSizes.spaceBtwItems),
+        padding: const EdgeInsets.only(right: 16),
         child: Column(
           children: [
             Container(
@@ -43,7 +42,7 @@ class TVerticalImageText extends StatelessWidget {
 
 
             const SizedBox(
-                height: TSizes.spaceBtwItems / 2 ),
+                height: 8 ),
             SizedBox(
               width: 40,
               child: Text(

@@ -21,6 +21,7 @@ class TProductDataDetail extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+
             Positioned(
               top: 12,
               child: TRoundedContainer(

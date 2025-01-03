@@ -11,10 +11,10 @@ class App extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
-      darkTheme: TAppTheme.darkTheme,
       home: LoginScreen(),
     );
 
 
   }
 }
+

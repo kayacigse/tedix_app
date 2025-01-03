@@ -1,10 +1,5 @@
 
 class TImages {
-  // -- App Logos
-  static const String darkAppLogo = "assets/logos/1.png";
-  static const String lightAppLogo = "assets/logos/2.png";
-
-
   // -- Category Icons
   static const String sportIcon = "assets/icons/categories/icons8-bowling-64.png";
   static const String clothIcon = "assets/icons/categories/icons8-tailors-dummy-64.png";

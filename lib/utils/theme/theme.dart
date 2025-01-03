@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:tedix/utils/theme/custom_themes/text_theme.dart';
-
 import 'custom_themes/appbar_theme.dart';
 import 'custom_themes/elevated_button_theme.dart';
 import 'custom_themes/text_field_theme.dart';
 import 'custom_themes/bottom_sheet_theme.dart';
 import 'custom_themes/outlined_button_theme.dart';
 import 'custom_themes/chip_theme.dart';
-
-
 
 class TAppTheme {
   TAppTheme._();//private
@@ -27,19 +24,6 @@ class TAppTheme {
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationtheme,
   );
-  static ThemeData darkTheme = ThemeData(
-    useMaterial3:  true,
-    fontFamily: 'Poppins',
-    brightness: Brightness.dark,
-    primaryColor: Colors.blue,
-    chipTheme: TChipTheme.darkChipTheme,
-    scaffoldBackgroundColor: Colors.black,
-    appBarTheme: TAppBarTheme.darkAppBarTheme,
-    bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
-    outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
-    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
-    inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationtheme,
-    textTheme: TTextTheme.darkTextTheme,
-  );
+
 
 }
